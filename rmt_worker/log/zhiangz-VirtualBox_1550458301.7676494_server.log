@@ -1,0 +1,30 @@
+[2019-02-17 21:51:41,767] 48721_worker_server INFO:Socket starts at 127.0.0.1:48721
+[2019-02-17 21:51:41,768] 48721_worker_server INFO:Listening...
+[2019-02-17 21:51:43,925] Client_Thread-1 INFO:Got connection from 127.0.0.1:34502
+[2019-02-17 21:51:43,925] 48721_worker_server INFO:Listening...
+[2019-02-17 21:51:43,926] Client_Thread-1 INFO:The connection's group name is admin
+[2019-02-17 21:51:43,926] Client_Thread-1 INFO:Recieving the Python script file...
+[2019-02-17 21:51:43,970] Client_Thread-1 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run38...
+[2019-02-17 21:51:43,971] Client_Thread-1 INFO:Writing is finished
+[2019-02-17 21:51:43,971] Client_Thread-1 INFO:Starting to run the script
+[2019-02-17 21:51:43,973] Client_Thread-1 INFO:Finished task for 127.0.0.1:34502
+[2019-02-17 21:51:46,026] Client_Thread-1 INFO:2019-02-17 21:51:46,026-xremote-INFO-2323220
+
+[2019-02-17 21:51:48,030] Client_Thread-1 INFO:2019-02-17 21:51:48,029-xremote-INFO-2323221
+
+[2019-02-17 21:51:50,033] Client_Thread-1 INFO:2019-02-17 21:51:50,033-xremote-INFO-2323222
+
+[2019-02-17 21:51:52,036] Client_Thread-1 INFO:2019-02-17 21:51:52,035-xremote-INFO-2323223
+
+[2019-02-17 21:51:54,040] Client_Thread-1 INFO:2019-02-17 21:51:54,040-xremote-INFO-2323224
+
+[2019-02-17 21:51:56,044] Client_Thread-1 INFO:2019-02-17 21:51:56,044-xremote-INFO-2323225
+
+[2019-02-17 21:51:58,047] Client_Thread-1 INFO:2019-02-17 21:51:58,047-xremote-INFO-2323226
+
+[2019-02-17 21:52:00,050] Client_Thread-1 INFO:2019-02-17 21:52:00,050-xremote-INFO-2323227
+
+[2019-02-17 21:52:02,058] Client_Thread-1 INFO:2019-02-17 21:52:02,053-xremote-INFO-2323228
+
+[2019-02-17 21:52:04,062] Client_Thread-1 INFO:2019-02-17 21:52:04,056-xremote-INFO-2323229
+

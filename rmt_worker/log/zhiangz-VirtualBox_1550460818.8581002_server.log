@@ -1,0 +1,23 @@
+[2019-02-17 22:33:38,858] 48721_worker_server INFO:Socket starts at 127.0.0.1:48721
+[2019-02-17 22:33:38,858] 48721_worker_server INFO:Listening...
+[2019-02-17 22:36:04,611] Client_Thread-1 INFO:Got connection from 127.0.0.1:34590
+[2019-02-17 22:36:04,611] 48721_worker_server INFO:Listening...
+[2019-02-17 22:36:04,611] Client_Thread-1 INFO:The connection's group name is admin
+[2019-02-17 22:36:04,611] Client_Thread-1 INFO:Recieving the Python script file...
+[2019-02-17 22:36:04,654] Client_Thread-1 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run55...
+[2019-02-17 22:36:04,654] Client_Thread-1 INFO:Writing is finished
+[2019-02-17 22:36:04,654] Client_Thread-1 INFO:Starting to run the script
+[2019-02-17 22:36:04,656] Client_Thread-1 INFO:Finished task for 127.0.0.1:34590
+[2019-02-17 22:36:05,199] Client_Thread-1 INFO:2019-02-17 22:36:05,199-xremote-INFO-2323220
+
+[2019-02-17 22:36:05,700] Client_Thread-1 INFO:2019-02-17 22:36:05,700-xremote-INFO-2323221
+
+[2019-02-17 22:36:06,202] Client_Thread-1 INFO:2019-02-17 22:36:06,202-xremote-INFO-2323222
+
+[2019-02-17 22:36:06,703] Client_Thread-1 INFO:2019-02-17 22:36:06,703-xremote-INFO-2323223
+
+[2019-02-17 22:36:07,204] Client_Thread-1 INFO:2019-02-17 22:36:07,204-xremote-INFO-2323224
+
+[2019-02-17 22:36:07,209] Client_Thread-1 INFO:Zipping the results...
+[2019-02-17 22:36:07,212] Client_Thread-1 INFO:Zipping is successful
+[2019-02-17 22:36:07,212] Client_Thread-1 INFO:Results file to send is 1156 bytes

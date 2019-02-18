@@ -1,0 +1,39 @@
+[2019-02-17 21:52:38,903] 48721_worker_server INFO:Socket starts at 127.0.0.1:48721
+[2019-02-17 21:52:38,904] 48721_worker_server INFO:Listening...
+[2019-02-17 21:52:47,582] Client_Thread-1 INFO:Got connection from 127.0.0.1:34504
+[2019-02-17 21:52:47,582] 48721_worker_server INFO:Listening...
+[2019-02-17 21:52:47,582] Client_Thread-1 INFO:The connection's group name is admin
+[2019-02-17 21:52:47,583] Client_Thread-1 INFO:Recieving the Python script file...
+[2019-02-17 21:52:47,626] Client_Thread-1 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run39...
+[2019-02-17 21:52:47,626] Client_Thread-1 INFO:Writing is finished
+[2019-02-17 21:52:47,626] Client_Thread-1 INFO:Starting to run the script
+[2019-02-17 21:52:47,629] Client_Thread-1 INFO:Finished task for 127.0.0.1:34504
+[2019-02-17 21:52:48,176] Client_Thread-1 INFO:2019-02-17 21:52:48,176-xremote-INFO-2323220
+
+[2019-02-17 21:52:48,678] Client_Thread-1 INFO:2019-02-17 21:52:48,677-xremote-INFO-2323221
+
+[2019-02-17 21:52:49,179] Client_Thread-1 INFO:2019-02-17 21:52:49,179-xremote-INFO-2323222
+
+[2019-02-17 21:52:49,681] Client_Thread-1 INFO:2019-02-17 21:52:49,681-xremote-INFO-2323223
+
+[2019-02-17 21:52:50,183] Client_Thread-1 INFO:2019-02-17 21:52:50,183-xremote-INFO-2323224
+
+[2019-02-17 21:52:50,684] Client_Thread-1 INFO:2019-02-17 21:52:50,684-xremote-INFO-2323225
+
+[2019-02-17 21:52:51,186] Client_Thread-1 INFO:2019-02-17 21:52:51,186-xremote-INFO-2323226
+
+[2019-02-17 21:52:51,687] Client_Thread-1 INFO:2019-02-17 21:52:51,687-xremote-INFO-2323227
+
+[2019-02-17 21:52:52,188] Client_Thread-1 INFO:2019-02-17 21:52:52,188-xremote-INFO-2323228
+
+[2019-02-17 21:52:52,690] Client_Thread-1 INFO:2019-02-17 21:52:52,690-xremote-INFO-2323229
+
+[2019-02-17 21:52:52,696] Client_Thread-1 INFO:Zipping the results...
+[2019-02-17 21:52:52,699] Client_Thread-1 INFO:Zipping is successful
+[2019-02-17 21:52:52,708] Client_Thread-1 ERROR:Error is encountered when zipping the results, Traceback (most recent call last):
+  File "/home/zhiangz/Documents/48721_ass3_part1/rmt_worker/server.py", line 128, in _python_process_handler
+    res_size = os.path.getsize(run_dir + '/results.zip');
+  File "/home/zhiangz/Documents/48721_ass3_part1/virt_env/lib/python3.5/genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run39/results.zip'
+

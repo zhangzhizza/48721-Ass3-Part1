@@ -166,3 +166,325 @@
 
 [2019-02-16 23:41:50,316] Client_Thread-12 INFO:NameError: name 'abd' is not defined
 
+[2019-02-17 10:28:02,864] 48721_worker_server INFO:Listening...
+[2019-02-17 10:28:02,864] Client_Thread-14 INFO:Got connection from 127.0.0.1:53546
+[2019-02-17 10:28:02,865] Client_Thread-14 INFO:The connection's group name is admin
+[2019-02-17 10:28:02,865] Client_Thread-14 INFO:Recieving the Python script file...
+[2019-02-17 10:28:02,907] Client_Thread-14 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run26...
+[2019-02-17 10:28:02,907] Client_Thread-14 INFO:Writing is finished
+[2019-02-17 10:28:02,907] Client_Thread-14 INFO:Starting to run the script
+[2019-02-17 10:28:02,909] Client_Thread-14 INFO:Finished task for 127.0.0.1:53546
+[2019-02-17 10:28:04,949] Client_Thread-14 INFO:2019-02-17 10:28:04,949-xremote-INFO-2323220
+
+[2019-02-17 10:28:04,950] Client_Thread-14 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:28:04,950] Client_Thread-14 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:28:04,950] Client_Thread-14 INFO:    print (abd)
+
+[2019-02-17 10:28:04,951] Client_Thread-14 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:28:36,409] Client_Thread-16 INFO:Got connection from 127.0.0.1:53548
+[2019-02-17 10:28:36,409] Client_Thread-16 INFO:The connection's group name is admin
+[2019-02-17 10:28:36,410] 48721_worker_server INFO:Listening...
+[2019-02-17 10:28:36,410] Client_Thread-16 INFO:Recieving the Python script file...
+[2019-02-17 10:28:36,456] Client_Thread-16 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run27...
+[2019-02-17 10:28:36,456] Client_Thread-16 INFO:Writing is finished
+[2019-02-17 10:28:36,457] Client_Thread-16 INFO:Starting to run the script
+[2019-02-17 10:28:36,461] Client_Thread-16 INFO:Finished task for 127.0.0.1:53548
+[2019-02-17 10:28:38,526] Client_Thread-16 INFO:2019-02-17 10:28:38,525-xremote-INFO-2323220
+
+[2019-02-17 10:28:38,528] Client_Thread-16 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:28:38,529] Client_Thread-16 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:28:38,529] Client_Thread-16 INFO:    print (abd)
+
+[2019-02-17 10:28:38,530] Client_Thread-16 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:29:12,451] Client_Thread-18 INFO:Got connection from 127.0.0.1:53550
+[2019-02-17 10:29:12,451] 48721_worker_server INFO:Listening...
+[2019-02-17 10:29:12,451] Client_Thread-18 INFO:The connection's group name is admin
+[2019-02-17 10:29:12,451] Client_Thread-18 INFO:Recieving the Python script file...
+[2019-02-17 10:29:12,495] Client_Thread-18 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run28...
+[2019-02-17 10:29:12,495] Client_Thread-18 INFO:Writing is finished
+[2019-02-17 10:29:12,495] Client_Thread-18 INFO:Starting to run the script
+[2019-02-17 10:29:12,497] Client_Thread-18 INFO:Finished task for 127.0.0.1:53550
+[2019-02-17 10:29:14,542] Client_Thread-18 INFO:2019-02-17 10:29:14,542-xremote-INFO-2323220
+
+[2019-02-17 10:29:14,543] Client_Thread-18 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:29:14,543] Client_Thread-18 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:29:14,543] Client_Thread-18 INFO:    print (abd)
+
+[2019-02-17 10:29:14,543] Client_Thread-18 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:29:27,284] 48721_worker_server INFO:Listening...
+[2019-02-17 10:29:27,284] Client_Thread-20 INFO:Got connection from 127.0.0.1:53552
+[2019-02-17 10:29:27,284] Client_Thread-20 INFO:The connection's group name is admin
+[2019-02-17 10:29:27,285] Client_Thread-20 INFO:Recieving the Python script file...
+[2019-02-17 10:29:27,327] Client_Thread-20 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run29...
+[2019-02-17 10:29:27,328] Client_Thread-20 INFO:Writing is finished
+[2019-02-17 10:29:27,328] Client_Thread-20 INFO:Starting to run the script
+[2019-02-17 10:29:27,331] Client_Thread-20 INFO:Finished task for 127.0.0.1:53552
+[2019-02-17 10:29:29,380] Client_Thread-20 INFO:2019-02-17 10:29:29,380-xremote-INFO-2323220
+
+[2019-02-17 10:29:29,382] Client_Thread-20 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:29:29,383] Client_Thread-20 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:29:29,383] Client_Thread-20 INFO:    print (abd)
+
+[2019-02-17 10:29:29,384] Client_Thread-20 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:29:49,943] 48721_worker_server INFO:Listening...
+[2019-02-17 10:29:49,943] Client_Thread-22 INFO:Got connection from 127.0.0.1:53554
+[2019-02-17 10:29:49,944] Client_Thread-22 INFO:The connection's group name is admin
+[2019-02-17 10:29:49,944] Client_Thread-22 INFO:Recieving the Python script file...
+[2019-02-17 10:29:49,987] Client_Thread-22 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run30...
+[2019-02-17 10:29:49,987] Client_Thread-22 INFO:Writing is finished
+[2019-02-17 10:29:49,987] Client_Thread-22 INFO:Starting to run the script
+[2019-02-17 10:29:49,989] Client_Thread-22 INFO:Finished task for 127.0.0.1:53554
+[2019-02-17 10:29:52,046] Client_Thread-22 INFO:2019-02-17 10:29:52,045-xremote-INFO-2323220
+
+[2019-02-17 10:29:52,047] Client_Thread-22 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:29:52,048] Client_Thread-22 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:29:52,049] Client_Thread-22 INFO:    print (abd)
+
+[2019-02-17 10:29:52,049] Client_Thread-22 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:30:06,947] 48721_worker_server INFO:Listening...
+[2019-02-17 10:30:06,947] Client_Thread-24 INFO:Got connection from 127.0.0.1:53556
+[2019-02-17 10:30:06,947] Client_Thread-24 INFO:The connection's group name is admin
+[2019-02-17 10:30:06,947] Client_Thread-24 INFO:Recieving the Python script file...
+[2019-02-17 10:30:06,991] Client_Thread-24 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run31...
+[2019-02-17 10:30:06,991] Client_Thread-24 INFO:Writing is finished
+[2019-02-17 10:30:06,991] Client_Thread-24 INFO:Starting to run the script
+[2019-02-17 10:30:06,993] Client_Thread-24 INFO:Finished task for 127.0.0.1:53556
+[2019-02-17 10:30:09,043] Client_Thread-24 INFO:2019-02-17 10:30:09,042-xremote-INFO-2323220
+
+[2019-02-17 10:30:09,044] Client_Thread-24 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:30:09,045] Client_Thread-24 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:30:09,046] Client_Thread-24 INFO:    print (abd)
+
+[2019-02-17 10:30:09,047] Client_Thread-24 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:43:05,901] Client_Thread-26 INFO:Got connection from 127.0.0.1:53558
+[2019-02-17 10:43:05,901] Client_Thread-26 INFO:The connection's group name is admin
+[2019-02-17 10:43:05,901] 48721_worker_server INFO:Listening...
+[2019-02-17 10:43:05,901] Client_Thread-26 INFO:Recieving the Python script file...
+[2019-02-17 10:43:05,945] Client_Thread-26 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run32...
+[2019-02-17 10:43:05,945] Client_Thread-26 INFO:Writing is finished
+[2019-02-17 10:43:05,945] Client_Thread-26 INFO:Starting to run the script
+[2019-02-17 10:43:05,947] Client_Thread-26 INFO:Finished task for 127.0.0.1:53558
+[2019-02-17 10:43:07,990] Client_Thread-26 INFO:2019-02-17 10:43:07,990-xremote-INFO-2323220
+
+[2019-02-17 10:43:07,991] Client_Thread-26 INFO:Traceback (most recent call last):
+
+[2019-02-17 10:43:07,992] Client_Thread-26 INFO:  File "run.py", line 13, in <module>
+
+[2019-02-17 10:43:07,992] Client_Thread-26 INFO:    print (abd)
+
+[2019-02-17 10:43:07,993] Client_Thread-26 INFO:NameError: name 'abd' is not defined
+
+[2019-02-17 10:45:23,721] 48721_worker_server INFO:Listening...
+[2019-02-17 10:45:23,721] Client_Thread-28 INFO:Got connection from 127.0.0.1:53560
+[2019-02-17 10:45:23,721] Client_Thread-28 INFO:The connection's group name is admin
+[2019-02-17 10:45:23,721] Client_Thread-28 INFO:Recieving the Python script file...
+[2019-02-17 10:45:23,765] Client_Thread-28 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run33...
+[2019-02-17 10:45:23,765] Client_Thread-28 INFO:Writing is finished
+[2019-02-17 10:45:23,766] Client_Thread-28 INFO:Starting to run the script
+[2019-02-17 10:45:23,768] Client_Thread-28 INFO:Finished task for 127.0.0.1:53560
+[2019-02-17 10:45:25,819] Client_Thread-28 INFO:2019-02-17 10:45:25,818-xremote-INFO-2323220
+
+[2019-02-17 10:45:27,822] Client_Thread-28 INFO:2019-02-17 10:45:27,822-xremote-INFO-2323221
+
+[2019-02-17 10:45:29,826] Client_Thread-28 INFO:2019-02-17 10:45:29,825-xremote-INFO-2323222
+
+[2019-02-17 10:45:31,830] Client_Thread-28 INFO:2019-02-17 10:45:31,829-xremote-INFO-2323223
+
+[2019-02-17 10:45:33,834] Client_Thread-28 INFO:2019-02-17 10:45:33,834-xremote-INFO-2323224
+
+[2019-02-17 10:45:35,839] Client_Thread-28 INFO:2019-02-17 10:45:35,838-xremote-INFO-2323225
+
+[2019-02-17 10:45:37,842] Client_Thread-28 INFO:2019-02-17 10:45:37,841-xremote-INFO-2323226
+
+[2019-02-17 10:45:39,845] Client_Thread-28 INFO:2019-02-17 10:45:39,845-xremote-INFO-2323227
+
+[2019-02-17 10:45:41,851] Client_Thread-28 INFO:2019-02-17 10:45:41,850-xremote-INFO-2323228
+
+[2019-02-17 10:45:43,857] Client_Thread-28 INFO:2019-02-17 10:45:43,854-xremote-INFO-2323229
+
+[2019-02-17 11:11:45,220] Client_Thread-30 INFO:Got connection from 127.0.0.1:53714
+[2019-02-17 11:11:45,220] 48721_worker_server INFO:Listening...
+[2019-02-17 11:11:45,220] Client_Thread-30 INFO:The connection's group name is admin
+[2019-02-17 11:11:45,221] Client_Thread-30 INFO:Recieving the Python script file...
+[2019-02-17 11:11:45,265] Client_Thread-30 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run34...
+[2019-02-17 11:11:45,265] Client_Thread-30 INFO:Writing is finished
+[2019-02-17 11:11:45,265] Client_Thread-30 INFO:Starting to run the script
+[2019-02-17 11:11:45,267] Client_Thread-30 INFO:Finished task for 127.0.0.1:53714
+[2019-02-17 11:11:47,314] Client_Thread-30 INFO:2019-02-17 11:11:47,313-xremote-INFO-2323220
+
+[2019-02-17 11:11:49,318] Client_Thread-30 INFO:2019-02-17 11:11:49,317-xremote-INFO-2323221
+
+[2019-02-17 11:11:51,322] Client_Thread-30 INFO:2019-02-17 11:11:51,321-xremote-INFO-2323222
+
+[2019-02-17 11:11:53,327] Client_Thread-30 INFO:2019-02-17 11:11:53,327-xremote-INFO-2323223
+
+[2019-02-17 11:11:55,331] Client_Thread-30 INFO:2019-02-17 11:11:55,331-xremote-INFO-2323224
+
+[2019-02-17 11:11:57,335] Client_Thread-30 INFO:2019-02-17 11:11:57,335-xremote-INFO-2323225
+
+[2019-02-17 11:11:59,339] Client_Thread-30 INFO:2019-02-17 11:11:59,338-xremote-INFO-2323226
+
+[2019-02-17 11:12:01,343] Client_Thread-30 INFO:2019-02-17 11:12:01,342-xremote-INFO-2323227
+
+[2019-02-17 11:12:03,347] Client_Thread-30 INFO:2019-02-17 11:12:03,347-xremote-INFO-2323228
+
+[2019-02-17 11:12:05,359] Client_Thread-30 INFO:2019-02-17 11:12:05,351-xremote-INFO-2323229
+
+[2019-02-17 14:32:37,045] 48721_worker_server INFO:Listening...
+[2019-02-17 14:32:37,045] Client_Thread-32 INFO:Got connection from 127.0.0.1:53716
+[2019-02-17 14:32:37,045] Client_Thread-32 INFO:The connection's group name is admin
+[2019-02-17 14:32:37,045] Client_Thread-32 INFO:Recieving the Python script file...
+[2019-02-17 14:32:37,089] Client_Thread-32 INFO:Writing the Python script file to /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run35...
+[2019-02-17 14:32:37,089] Client_Thread-32 INFO:Writing is finished
+[2019-02-17 14:32:37,089] Client_Thread-32 INFO:Starting to run the script
+[2019-02-17 14:32:37,092] Client_Thread-32 INFO:Finished task for 127.0.0.1:53716
+[2019-02-17 14:32:38,102] Client_Thread-32 INFO:[2019-02-17 14:32:38,101] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread_ROOT INFO:Creating EnergyPlus simulation environment...
+
+[2019-02-17 14:32:38,103] Client_Thread-32 INFO:[2019-02-17 14:32:38,103] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread_ROOT INFO:EnergyPlus working directory is in /home/zhiangz/Documents/48721_ass3_part1/rmt_worker/log/admin/Eplus-env-run35/Eplus-env-IW-tmy3Weather-v9706-res1/Eplus-env-sub_run1
+
+[2019-02-17 14:36:43,107] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:EnergyPlus Starting
+
+[2019-02-17 14:36:43,107] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,107] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:EnergyPlus, Version 8.3.0-6d97d074ea, YMD=2019.02.17 14:32
+
+[2019-02-17 14:36:43,107] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Processing Data Dictionary
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Processing Input File
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Initializing Simulation
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Reporting Surfaces
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,108] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Beginning Primary Simulation
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Initializing New Environment Parameters
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {1}
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Instantiating Building Controls Virtual Test Bed
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:ExternalInterface initializes.
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,109] Client_Thread-32 INFO:[2019-02-17 14:36:43,107] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Number of outputs in ExternalInterface = 12
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Number of inputs  in ExternalInterface = 1
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {2}
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {3}
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {4}
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {5}
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,110] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {6}
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {7}
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Warming up {8}
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Starting Simulation at 01/01 for WHOLEYEAR
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:ExternalInterface starts first data exchange.
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,111] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Updating Shadowing Calculations, Start Date=01/21
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Continuing Simulation at 01/21 for WHOLEYEAR
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Updating Shadowing Calculations, Start Date=02/10
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:[2019-02-17 14:36:43,108] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Continuing Simulation at 02/10 for WHOLEYEAR
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Updating Shadowing Calculations, Start Date=03/02
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,112] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Continuing Simulation at 03/02 for WHOLEYEAR
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Updating Shadowing Calculations, Start Date=03/22
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Continuing Simulation at 03/22 for WHOLEYEAR
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:Writing final SQL reports
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:[2019-02-17 14:36:43,109] EPLUS_ENV_IW-tmy3Weather-v9706_MainThread-EPLUSPROCESS_EPI_0 INFO:EnergyPlus Run Time=00hr 04min  4.84sec
+
+[2019-02-17 14:36:43,113] Client_Thread-32 INFO:
+

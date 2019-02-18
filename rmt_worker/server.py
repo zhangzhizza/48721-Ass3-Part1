@@ -1,7 +1,7 @@
 """
 The server to run code submitted remotely
 """
-import socket, os, time, threading, traceback, subprocess, _thread
+import socket, os, time, threading, traceback, subprocess, _thread, signal
 from util.logger import Logger
 
 FD = os.path.dirname(os.path.realpath(__file__));
@@ -88,29 +88,70 @@ class WorkerServer(object):
                         stdout = subprocess.PIPE,
                         stderr = subprocess.PIPE,
                         preexec_fn=os.setsid);
-			#streamdata = python_process.communicate()
-			#local_logger.info(streamdata);
 			_thread.start_new_thread(self._log_subprocess_info,
-                                (python_process.stdout, python_process.stderr, c, local_logger));
+                                (python_process.stderr, c, local_logger));
+			_thread.start_new_thread(self._python_process_handler,
+								(python_process, c, run_dir, this_gp_dir, local_logger));
 
 		else:
 			c.sendall(b'error:The KEY is invalid')
 			local_logger.warning('Recieved untrusted connecton from ' + addr);
 		local_logger.info('Finished task for ' + addr);
 
-	def _log_subprocess_info(self, out_info, c, logger):
+	def _log_subprocess_info(self, out_err, c, logger):
 		for line in iter(out_err.readline, b''):
 			logger.info(line.decode())
 			line = 'script_out:' + line.decode();
 			c.sendall(bytearray(line, encoding = 'utf-8'));
-		c.sendall(b'info_log_finished');
+		c.sendall(b'scripting_finish')
 
-	def _log_subprocess_err(self, out_err, c, logger):
-		for line in iter(out_err.readline, b''):
-			logger.info(line.decode())
-			line = 'script_out:' + line.decode();
-			c.sendall(bytearray(line, encoding = 'utf-8'));
-		c.sendall(b'log_finished');
+	def _python_process_handler(self, process, c, run_dir, this_gp_dir, logger):
+		while True:
+			if process.poll() is None:
+				# The process is still running
+				continue;
+			else:
+		    	# The process terminates
+				#os.killpg(process.pid, signal.SIGTERM);
+				try:
+					# Zip the results
+					run_dir_rl = run_dir.split(os.sep)[-1]
+					logger.info('Zipping the results at %s...'%(run_dir))
+					subprocess.call('zip -r results.zip %s'%(run_dir_rl),
+					        shell = True,
+					        cwd = this_gp_dir,
+					        stdout = subprocess.PIPE,
+					        stderr = subprocess.PIPE,
+					        preexec_fn=os.setsid);
+					logger.info('Zipping is successful')
+					recv = c.recv(1024).decode(encoding = 'utf-8')
+					if recv == 'ready_to_recieve':
+						c.sendall(b'res_send')
+					# Send the results
+					res_size = os.path.getsize(this_gp_dir + '/results.zip');
+					logger.info('Results file to send is %s bytes'%(res_size))
+					# Send the file size first
+					c.sendall(bytearray('res_size:%s'%(res_size), encoding = 'utf-8'));
+					c.recv(1024); # Break
+					f = open(this_gp_dir + '/results.zip', 'rb');
+					f_line = f.readline(1024);
+					send_size = 0;
+					while len(f_line)>0:	
+						# Send 1024 bytes a time
+						c.sendall(f_line);
+						send_size += len(f_line)
+						f_line = f.readline(1024);
+					# Delete the zipped file
+					#os.remove(this_gp_dir + '/results.zip')
+				except Exception as e:
+					logger.error('Error is encountered when zipping the results, %s'
+											%(traceback.format_exc()));
+					recv = c.recv(1024).decode(encoding = 'utf-8')
+					if recv == 'ready_to_recieve':
+						c.sendall(b'res_collect_fail')
+				break;
+			#time.sleep(2);
+		return 0;
 
 
 	def _get_working_folder(self, parent_dir, dir_sig = '-run'):
