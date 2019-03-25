@@ -22,7 +22,7 @@ from ..util.time import (get_hours_to_now, get_time_string, get_delta_seconds,
 from ..util.time_interpolate import get_time_interpolate
 
 
-WEATHER_FORECAST_COLS_SELECT = {'tmy3': [0, 2, 8, 9],
+WEATHER_FORECAST_COLS_SELECT = {'tmy3': [0], # OAT only
                                 'actW': [0, 1, 5, 6]}
 YEAR = 1991 # Non leap year
 CWD = os.getcwd();
@@ -59,7 +59,7 @@ class EplusEnv(Env):
 
     def __init__(self, eplus_path, weather_path, bcvtb_path, variable_path, idf_path, env_name,
                  incl_forecast = False, forecastRandMode = 'normal', forecastRandStd = 0.15,
-                 forecastSource = 'tmy3', forecastFilePath = None, forecast_hour = 12, act_repeat = 1,
+                 forecastSource = 'tmy3', forecastFilePath = None, forecast_hour = 24, act_repeat = 1,
                  max_ep_data_store_num = 10):
         self._env_name = env_name;
         self._thread_name = threading.current_thread().getName();
@@ -210,8 +210,11 @@ class EplusEnv(Env):
         
         # Read the weather forecast
         if self._incl_forecast:
-            wea_forecast = self._get_weather_forecast(curSimTim); 
-            ret.append(wea_forecast);
+            if curSimTim%86400 == 0:
+                wea_forecast = self._get_weather_forecast(curSimTim); 
+                ret[-1].extend(wea_forecast);
+            else:
+                ret[-1].extend([-999 for i in range(self._forecast_hour)]);
         
         # Check if episode terminates
         is_terminal = False;
@@ -290,8 +293,11 @@ class EplusEnv(Env):
         ret.append(Dblist);
         # Read the weather forecast
         if self._incl_forecast:
-            wea_forecast = self._get_weather_forecast(curSimTim);
-            ret.append(wea_forecast);
+            if curSimTim%86400 == 0:
+                wea_forecast = self._get_weather_forecast(curSimTim); 
+                ret[-1].extend(wea_forecast);
+            else:
+                ret[-1].extend([-999 for i in range(self._forecast_hour)]);
         # Add terminal status
         ret.append(is_terminal);
         # Change some attributes
@@ -666,23 +672,20 @@ class EplusEnv(Env):
             ret.extend(weatherAtTime.tolist());
         # Add randomness to the forecast
         if self._forecastRandMode == 'normal':
-            ret = self._addNormalRandomToForecast(ret, self._forecastRandStd, self._min_max_limits[-len(ret):]);
+            ret = self._addNormalRandomToForecast(ret, self._forecastRandStd);
             
         return ret;
 
-    def _addNormalRandomToForecast(self, rawForecast, forecastRandStd, min_max_limits):
+    def _addNormalRandomToForecast(self, rawForecast, forecastRandStd):
         """
         Randomness is added by raw*(1 + dev), where dev is sampled from normal distribution with mean 0, std forecastRandStd.
         """
         # Sample from normal distribution for dev
-        randomBase = np.random.normal(0, forecastRandStd, len(min_max_limits));
+        randomBase = np.random.normal(0, forecastRandStd, len(rawForecast));
         # Caculate the randomed forecast
         randomedForecastRaw = rawForecast * (1 + randomBase);
-        # Clip the randomed forecast by its limits
-        min_max_limits = np.array(min_max_limits);
-        randomedForecastCliped = np.clip(randomedForecastRaw, min_max_limits[:, 0], min_max_limits[:, 1]);
-
-        return randomedForecastCliped.tolist();
+        
+        return randomedForecastRaw.tolist();
 
 
             

@@ -177,7 +177,7 @@ RunPeriod,
     wholeyear,               !- Name
     1,                       !- Begin Month
     1,                       !- Begin Day of Month
-    3,                      !- End Month
+    1,                      !- End Month
     31,                      !- End Day of Month
     Sunday,          !- Day of Week for Start Day
     No,                      !- Use Weather File Holidays and Special Days
@@ -11808,7 +11808,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     600.00,                   !- Hydronic Tubing Length {m} previously 15m
     MeanAirTemperature,      !- Temperature Control Type
-    0.00039,                !- Rated Flow Rate {m3/s}
+    0.00080,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -11868,7 +11868,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     200.00,                   !- Hydronic Tubing Length {m}
     MeanAirTemperature,      !- Temperature Control Type
-    0.00013,                !- Rated Flow Rate {m3/s}
+    0.00052,                !- Rated Flow Rate {m3/s} s s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -11928,7 +11928,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     200.00,                   !- Hydronic Tubing Length {m}
     MeanAirTemperature,      !- Temperature Control Type
-    0.00026,                !- Rated Flow Rate {m3/s}
+    0.00052,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     75.00,                   !- Rated Power Consumption {W}
@@ -11988,7 +11988,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     100.00,                   !- Hydronic Tubing Length {m}
     MeanAirTemperature,      !- Temperature Control Type
-    0.00005,                !- Rated Flow Rate {m3/s}
+    0.00010,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -12048,7 +12048,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     600.00,                   !- Hydronic Tubing Length {m}
     MeanAirTemperature,      !- Temperature Control Type
-    0.00039,                !- Rated Flow Rate {m3/s}
+    0.00080,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -12108,7 +12108,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0270,                  !- Hydronic Tubing Inside Diameter {m}
     600.00,                   !- Hydronic Tubing Length {m}
     MeanAirTemperature,      !- Temperature Control Type
-    0.00039,                !- Rated Flow Rate {m3/s}
+    0.00080,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     300000.00,               !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -12168,7 +12168,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0150,                  !- Hydronic Tubing Inside Diameter {m} previously 0.015
     28,                   !- Hydronic Tubing Length {m} previously 28
     MeanAirTemperature,      !- Temperature Control Type
-    0.000065,                !- Rated Flow Rate {m3/s}
+    0.00013,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     75000.00,                !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -12228,7 +12228,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0150,                  !- Hydronic Tubing Inside Diameter {m}
     56.00,                   !- Hydronic Tubing Length {m} previously 28
     MeanAirTemperature,      !- Temperature Control Type
-    0.00013,                !- Rated Flow Rate {m3/s}
+    0.00052,                !- Rated Flow Rate {m3/s} s s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     75000.00,                !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -12288,7 +12288,7 @@ ZoneHVAC:LowTemperatureRadiant:ConstantFlow,
     0.0150,                  !- Hydronic Tubing Inside Diameter {m}
     28.00,                   !- Hydronic Tubing Length {m} previously 28
     MeanAirTemperature,      !- Temperature Control Type
-    0.000065,                !- Rated Flow Rate {m3/s}
+    0.00013,                !- Rated Flow Rate {m3/s} s
     On 24/7,                 !- Pump Flow Rate Schedule Name
     75000.00,                !- Rated Pump Head {Pa}
     50.00,                   !- Rated Power Consumption {W}
@@ -14786,7 +14786,7 @@ Pump:ConstantSpeed,
     tempHWLoop Supply Pump,             !- Name
     tempHWLoop Supply Side Inlet,  !- Inlet Node Name
     tempHWLoop Supply Pump Water Outlet Node,      !- Outlet Node Name
-    0.0020,                !- Rated Flow Rate
+    autosize,                !- Rated Flow Rate
     20000.00,                !- Rated Pump Head
     autosize,                   !- Rated Power Consumption
     0.9,                  !- Motor Efficiency
@@ -14797,7 +14797,7 @@ Pump:ConstantSpeed,
     tempCHWLoop Supply Pump,             !- Name
     tempCHWLoop Supply Side Inlet,  !- Inlet Node Name
     tempCHWLoop Supply Pump Water Outlet Node,      !- Outlet Node Name
-    0.0020,                !- Rated Flow Rate
+    autosize,                !- Rated Flow Rate
     20000.00,                !- Rated Pump Head
     autosize,                   !- Rated Power Consumption
     0.9,                  !- Motor Efficiency
@@ -14857,7 +14857,7 @@ PlantLoop,
     tempHWLoop Supply Side Outlet,  !- Loop Temperature Setpoint Node Name
     100.00,                  !- Maximum Loop Temperature {C}
     10.00,                   !- Minimum Loop Temperature {C}
-    0.00300,                !- Maximum Loop Flow Rate {m3/s}
+    autosize,                !- Maximum Loop Flow Rate {m3/s}
     0.000000,                !- Minimum Loop Flow Rate {m3/s}
     autocalculate,           !- Plant Loop Volume {m3}
     tempHWLoop Supply Side Inlet,  !- Plant Side Inlet Node Name
@@ -14905,7 +14905,7 @@ PlantLoop,
     tempCHWLoop Supply Side Outlet,  !- Loop Temperature Setpoint Node Name
     80.00,                   !- Maximum Loop Temperature {C}
     0.00,                    !- Minimum Loop Temperature {C}
-    0.00300,                !- Maximum Loop Flow Rate {m3/s}
+    autosize,                !- Maximum Loop Flow Rate {m3/s}
     0.000000,                !- Minimum Loop Flow Rate {m3/s}
     autocalculate,           !- Plant Loop Volume {m3}
     tempCHWLoop Supply Side Inlet,  !- Plant Side Inlet Node Name

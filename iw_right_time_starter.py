@@ -17,8 +17,8 @@ while is_terminal == False:
 		act = 1; 
 	# For all the weekdays
 	else: 
-	# Before 8:00 AM or after 8:00 PM, step down the setpoint
-		if hour < 8 or hour >= 20: 
+	# Before 7:00 AM or after 8:00 PM, step down the setpoint
+		if hour < 7 or hour >= 20: 
 			act = 1;
 	# For other time, step up the setpoint
 		else: 

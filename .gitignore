@@ -19,6 +19,7 @@ src/HVAC_RL_web_worker_client/log
 **/*~run.sh*
 **/*run.meta*
 **/*workers_meta*/
+rmt_worker/log/
 
 *.swp
 *.pyc

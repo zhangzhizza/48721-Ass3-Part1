@@ -24,7 +24,7 @@ def get_time_interpolate(dataframe, time):
     """
     # If the time index exists, just return that index row
     if time in dataframe.index:
-        return dataframe.loc[time].as_matrix().flatten();
+        return dataframe.loc[time].values.flatten();
     
     # Else, do interpolation
     dataframeCmpTime = dataframe.index >= time;
