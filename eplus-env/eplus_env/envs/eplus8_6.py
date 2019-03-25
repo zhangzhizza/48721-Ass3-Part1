@@ -183,12 +183,12 @@ class EplusEnv(Env):
         eplus_logger = Logger().getLogger('EPLUS_ENV_%s_%s-EPLUSPROCESS_EPI_%d'
                                         %(self._env_name, self._thread_name, self._epi_num),
                                         LOG_LEVEL_EPLS, LOG_FMT);
-        _thread.start_new_thread(self._log_subprocess_info,
-                                (eplus_process.stdout,
-                                 eplus_logger));
-        _thread.start_new_thread(self._log_subprocess_err,
-                                (eplus_process.stderr,
-                                 eplus_logger));                       
+        #_thread.start_new_thread(self._log_subprocess_info,
+        #                        (eplus_process.stdout,
+        #                         eplus_logger));
+        #_thread.start_new_thread(self._log_subprocess_err,
+        #                        (eplus_process.stderr,
+        #                         eplus_logger));                       
             
         # Establish connection with EnergyPlus
         conn, addr = self._socket.accept()     # Establish connection with client.

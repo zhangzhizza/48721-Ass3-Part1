@@ -14,12 +14,12 @@ register(
             'variable_path':FD + '/envs/eplus_models/iw_v97/learning/cfg/tmy3Weather.cfg',
             'idf_path':FD + '/envs/eplus_models/iw_v97/learning/idf/tmy3Weather.idf',
             'env_name': 'IW-tmy3Weather-v9706',
-            'incl_forecast': False,
+            'incl_forecast': True,
             'forecastRandMode': 'normal',
             'forecastRandStd': 0.15,
             'forecastSource': 'tmy3',
             'forecastFilePath': None,
-            'forecast_hour': 12,
+            'forecast_hour': 24,
             'act_repeat': 1});
 
 register(

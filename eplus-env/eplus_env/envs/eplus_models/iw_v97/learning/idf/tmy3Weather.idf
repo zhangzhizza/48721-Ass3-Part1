@@ -15320,9 +15320,9 @@ Output:Variable,
 
 Output:Variable,*,Site Outdoor Air Drybulb Temperature,timestep; !- Zone Average [C]
 Output:Variable,*,Site Outdoor Air Relative Humidity,timestep; !- Zone Average [%]
-Output:Variable,*,Site Outdoor Air Dewpoint Temperature,timestep; !- Zone Average [C]
-Output:Variable,*,Site Wind Speed,timestep; !- Zone Average [M/S]
-Output:Variable,*,Site Wind Direction,timestep; !- Zone Average [DEG]
+!Output:Variable,*,Site Outdoor Air Dewpoint Temperature,timestep; !- Zone Average [C]
+!Output:Variable,*,Site Wind Speed,timestep; !- Zone Average [M/S]
+!Output:Variable,*,Site Wind Direction,timestep; !- Zone Average [DEG]
 Output:Variable,*,Site Direct Solar Radiation Rate per Area,timestep; !- Zone Average [W/M2]
 Output:Variable,*,Site Diffuse Solar Radiation Rate per Area,timestep; !- Zone Average [W/M2]
 
@@ -15344,15 +15344,15 @@ Output:Variable,
     IW Average PMV, !- Variable Name
     timestep; !- Reporting
 
-Output:Variable,
-    *, !- Key Value
-    IW Max PMV, !- Variable Name
-    timestep; !- Reporting
+!Output:Variable,
+!    *, !- Key Value
+!    IW Max PMV, !- Variable Name
+!    timestep; !- Reporting!
 
-Output:Variable,
-    *, !- Key Value
-    IW Occupy Mode Flag, !- Variable Name
-    timestep; !- Reporting
+!Output:Variable,
+!    *, !- Key Value
+!    IW Occupy Mode Flag, !- Variable Name
+!    timestep; !- Reporting
 
 Output:Variable,
     *, !- Key Value
@@ -15374,30 +15374,30 @@ Output:Variable,
     IW Occp Mode, !- Variable Name
     timestep; !- Reporting
 
-Output:Variable,
-    *, !- Key Value
-    Debug_1, !- Variable Name
-    timestep; !- Reporting
+!Output:Variable,
+!    *, !- Key Value
+!    Debug_1, !- Variable Name
+!    timestep; !- Reporting!
 
-Output:Variable,
-    *, !- Key Value
-    Debug_2, !- Variable Name
-    timestep; !- Reporting
+!Output:Variable,
+!    *, !- Key Value
+!    Debug_2, !- Variable Name
+!    timestep; !- Reporting!
 
-Output:Variable,
-    *, !- Key Value
-    Debug_3, !- Variable Name
-    timestep; !- Reporting
+!Output:Variable,
+!    *, !- Key Value
+!    Debug_3, !- Variable Name
+!    timestep; !- Reporting
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:ENVIRONMENTALIMPACTFACTORS ===========
 
-Output:EnvironmentalImpactFactors,
-    Daily;                   !- Reporting Frequency
+!Output:EnvironmentalImpactFactors,
+!    Daily;                   !- Reporting Frequency!
 
-Output:EnvironmentalImpactFactors,
-    Monthly;                 !- Reporting Frequency
+!Output:EnvironmentalImpactFactors,
+!    Monthly;                 !- Reporting Frequency!
 
-Output:EnvironmentalImpactFactors,
-    RunPeriod;               !- Reporting Frequency
+!Output:EnvironmentalImpactFactors,
+!    RunPeriod;               !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:EnergyManagementSystem ===========
 Output:EnergyManagementSystem,
@@ -16255,7 +16255,7 @@ EnergyManagementSystem:Program,
     !ELSE,
     !  SET Occp_First_Come_Hr_Rpt = 99,
     ENDIF,
-    ! Set last leave time at every 12:05
+    ! Set last leave time at every 0:05
     IF (Hour == 0 && Last_Hour == 23) || (Step_First_Flag == 1),
       ! For weekdays
       IF DayOfWeek > 1 && DayOfWeek < 7,

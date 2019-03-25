@@ -180,7 +180,7 @@ SizingPeriod:DesignDay,
 
 RunPeriod,
     Phipps_CSL_Building_Summer,  !- Name 
-    6,                       !- Begin Month of 2016
+    8,                       !- Begin Month of 2016
     1,                       !- Begin Day of Month
     8,                       !- End Month
     31,                       !- End Day of Month
@@ -1615,14 +1615,14 @@ Schedule:Compact,
     Through: 12/31,          !- Field 1
     For: Weekends SummerDesignDay WinterDesignDay,            !- Field 2
     Until: 09:00,
-    18,
+    16,
     Until: 18:00,
-    22,
+    16,
     Until: 24:00,            !- Field 7
-    18,                       !- Field 8
+    16,                       !- Field 8
     For: Weekdays AllOtherDays,
     Until: 24:00,
-    18;
+    16;
 
 Schedule:Compact,
     ZoneCoolingSetpointCls,    !- Name
@@ -2118,7 +2118,7 @@ Schedule:Compact,
 Schedule:File,
 StoCofOccpSch,   !- Name
 Fraction,          !- Schedule Type Limits Name
-/home/zhiangz/Documents/48721_ass3_part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
+/home/zhiangz/Documents/48721-Ass3-Part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
 4,                       !- Column Number
 7,                       !- Rows to Skip at Top
 8760,                     !- Number of Hours of Data
@@ -2129,7 +2129,7 @@ No,                      !- Interpolate to Timestep
 Schedule:File,
 StoOffOccpSch,   !- Name
 Fraction,          !- Schedule Type Limits Name
-/home/zhiangz/Documents/48721_ass3_part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
+/home/zhiangz/Documents/48721-Ass3-Part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
 3,                       !- Column Number
 7,                       !- Rows to Skip at Top
 8760,                     !- Number of Hours of Data
@@ -2141,7 +2141,7 @@ No,                      !- Interpolate to Timestep
 Schedule:File,
 StoClsOccpSch,   !- Name
 Fraction,          !- Schedule Type Limits Name
-/home/zhiangz/Documents/48721_ass3_part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
+/home/zhiangz/Documents/48721-Ass3-Part1/eplus-env/eplus_env/envs/eplus_models/csl_shave/learning/idf/occp_schedule_file_10m.csv,    !- File Name
 5,                       !- Column Number
 7,                       !- Rows to Skip at Top
 8760,                     !- Number of Hours of Data
@@ -35200,7 +35200,7 @@ EnergyManagementSystem:Program,
     ENDIF,
     !- Set the setpoints
     SET GlobalStptAdj_bounded = GlobalStptAdj,
-    IF (-GlobalStptAdj > 5.0),
+    IF ((0-GlobalStptAdj) > 5.0),
         SET GlobalStptAdj_bounded = -5.0,    
     ENDIF,
     IF (GlobalStptAdj > 5.0),

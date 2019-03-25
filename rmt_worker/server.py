@@ -7,8 +7,9 @@ from util.logger import Logger
 FD = os.path.dirname(os.path.realpath(__file__));
 LOG_LEVEL = 'INFO';
 LOG_FMT = "[%(asctime)s] %(name)s %(levelname)s:%(message)s";
-KEYS = ['abcd']
-GROUP_NAMES = ['admin']
+KEYS = ['Pd3QWzATcQ', 'UDOvBEIPiH', 'nw7UJeBc3K', 'j0YSw56PpW']
+GROUP_NAMES = ['admin', 'iw_right_time', 'csl_load_razor', 'csl_short_cycle']
+MAX_CLIENTS = 10;
 
 class WorkerServer(object):
 
@@ -17,6 +18,8 @@ class WorkerServer(object):
 		self._logger_main = Logger().getLogger('48721_worker_server', LOG_LEVEL, LOG_FMT, 
 			log_file_path = self._log_file_path);
 		self._client_threads = [];
+		self._clients_count = 0;
+		self._lock = threading.Lock();
 		self._port = port;
 		self._ip = ip;
 
@@ -33,6 +36,9 @@ class WorkerServer(object):
 				client_thread = threading.Thread(target = self._client_handler
 													, args = (c, addr));
 				client_thread.start();
+				self._lock.acquire();
+				self._clients_count += 1;
+				self._lock.release();
 			except Exception as e:
 					self._logger_main.error('Error is encountered when accepting the connection from %s, %s'
 											%((':'.join(str(e) for e in addr)), traceback.format_exc()));
@@ -45,9 +51,16 @@ class WorkerServer(object):
 		addr = (':'.join(str(e) for e in addr));   
 		local_logger.info('Got connection from ' + addr);
 		recv = c.recv(1024).decode(encoding = 'utf-8')
-		if recv.lower() in KEYS:
+		if self._clients_count > MAX_CLIENTS:
+			c.sendall(b'error:The server is too busy, try again later');
+			local_logger.warning('Current client number %s is higher the the max allowed %s'
+									%(self._clients_count, MAX_CLIENTS));
+		elif recv not in KEYS:
+			c.sendall(b'error:The KEY is invalid')
+			local_logger.warning('Recieved untrusted connecton from ' + addr);
+		else:
 			# Determine the sender group name
-			this_exp_gp_name = GROUP_NAMES[KEYS.index(recv.lower())]
+			this_exp_gp_name = GROUP_NAMES[KEYS.index(recv)]
 			local_logger.info('The connection\'s group name is %s'%this_exp_gp_name);
 			c.sendall(b'ready_to_recieve');
 			# Start to recieve the file
@@ -88,21 +101,26 @@ class WorkerServer(object):
                         stdout = subprocess.PIPE,
                         stderr = subprocess.PIPE,
                         preexec_fn=os.setsid);
-			_thread.start_new_thread(self._log_subprocess_info,
-                                (python_process.stderr, c, local_logger));
-			_thread.start_new_thread(self._python_process_handler,
-								(python_process, c, run_dir, this_gp_dir, local_logger));
-
-		else:
-			c.sendall(b'error:The KEY is invalid')
-			local_logger.warning('Recieved untrusted connecton from ' + addr);
+			log_t = threading.Thread(target = self._log_subprocess_info,
+                                args = (python_process.stderr, c, local_logger));
+			prs_t = threading.Thread(target = self._python_process_handler,
+								args = (python_process, c, run_dir, this_gp_dir, local_logger));
+			log_t.start()
+			prs_t.start()
+			log_t.join()
+			prs_t.join()
+			
 		local_logger.info('Finished task for ' + addr);
+		self._lock.acquire();
+		self._clients_count -= 1;
+		self._lock.release();
 
 	def _log_subprocess_info(self, out_err, c, logger):
 		for line in iter(out_err.readline, b''):
 			logger.info(line.decode())
 			line = 'script_out:' + line.decode();
 			c.sendall(bytearray(line, encoding = 'utf-8'));
+			c.recv(1024);
 		c.sendall(b'scripting_finish')
 
 	def _python_process_handler(self, process, c, run_dir, this_gp_dir, logger):
@@ -113,8 +131,12 @@ class WorkerServer(object):
 			else:
 		    	# The process terminates
 				#os.killpg(process.pid, signal.SIGTERM);
+				time.sleep(2);
 				try:
 					# Zip the results
+					# Delete the zipped file first
+					if os.path.isfile(this_gp_dir + '/results.zip'):
+						os.remove(this_gp_dir + '/results.zip')
 					run_dir_rl = run_dir.split(os.sep)[-1]
 					logger.info('Zipping the results at %s...'%(run_dir))
 					subprocess.call('zip -r results.zip %s'%(run_dir_rl),
@@ -124,25 +146,31 @@ class WorkerServer(object):
 					        stderr = subprocess.PIPE,
 					        preexec_fn=os.setsid);
 					logger.info('Zipping is successful')
-					recv = c.recv(1024).decode(encoding = 'utf-8')
-					if recv == 'ready_to_recieve':
-						c.sendall(b'res_send')
-					# Send the results
-					res_size = os.path.getsize(this_gp_dir + '/results.zip');
-					logger.info('Results file to send is %s bytes'%(res_size))
-					# Send the file size first
-					c.sendall(bytearray('res_size:%s'%(res_size), encoding = 'utf-8'));
-					c.recv(1024); # Break
-					f = open(this_gp_dir + '/results.zip', 'rb');
-					f_line = f.readline(1024);
-					send_size = 0;
-					while len(f_line)>0:	
-						# Send 1024 bytes a time
-						c.sendall(f_line);
-						send_size += len(f_line)
+					trial_count = 10;
+					while trial_count > 0:
+						recv = c.recv(1024).decode(encoding = 'utf-8')
+						if recv == 'ready_to_recieve':
+							c.sendall(b'res_send')
+							break;
+						else:
+							trial_count -= 1;
+					if trial_count > 0:
+						# Send the results
+						res_size = os.path.getsize(this_gp_dir + '/results.zip');
+						logger.info('Results file to send is %s bytes'%(res_size))
+						# Send the file size first
+						c.sendall(bytearray('res_size:%s'%(res_size), encoding = 'utf-8'));
+						c.recv(1024); # Break
+						f = open(this_gp_dir + '/results.zip', 'rb');
 						f_line = f.readline(1024);
-					# Delete the zipped file
-					#os.remove(this_gp_dir + '/results.zip')
+						send_size = 0;
+						while len(f_line)>0:	
+							# Send 1024 bytes a time
+							c.sendall(f_line);
+							send_size += len(f_line)
+							f_line = f.readline(1024);
+					else:
+						logger.error('Server fails to recieve ready_to_recieve signal from the client');
 				except Exception as e:
 					logger.error('Error is encountered when zipping the results, %s'
 											%(traceback.format_exc()));
