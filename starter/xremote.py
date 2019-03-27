@@ -111,7 +111,7 @@ def run_client(ip, port, key, path):
 						written_byte += len(recv);
 						written_prop = (written_byte/1024.0)/res_size;
 						if written_byte%10240 == 0:
-							logger.info('Downloading in progress %s%'%(written_prop * 100));
+							logger.info('Downloading in progress %s%%'%(written_prop * 100));
 			
 				logger.info('The results has been downloaded at %s'%(os.path.abspath(res_dir)));
 		logger.info('xremote is done, xremote exits')
